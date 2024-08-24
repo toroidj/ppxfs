@@ -1,0 +1,92 @@
+ ------------------------------------------------------------------------------
+	Paper Plane xUI  FS Module R0	Copyright (c)2024 TORO
+ ------------------------------------------------------------------------------
+
+●使用方法
+
+	ppxfs.dll (32bit版) / ppxfs64.dll (64bit版) /
+	ppxfs64A.dll (ARM64版) を PPx があるディレクトリ内に用意し、
+	下記の書式に従って実行します。
+	
+	MultiByte 版は対応していません。
+
+
+● FS Module の詳細
+
+	PPx FS Module は、以下の関数・コマンドがあります。
+
+コマンド *makedirlist([["パス"] [, ["ワイルドカード"] [, オプション]]])
+関数     %*makedirlist([["パス"] [, ["ワイルドカード"] [, オプション]]])
+
+	指定パスのディレクトリ一覧をテキストで取得します。関数版は
+	取得したテキストを返します。
+	
+	例1) *makedirlist "%'temp'", , utf8, nosubdir, "%'temp'%\result.txt"
+	例2) *logwindow "%*makedirlist("%'temp'", *.tmp)"
+
+	オプションは、以下の指定を「,」区切りで指定できます。
+
+		"ファイル名" 一覧を保存するファイルの名前です。
+
+		subdir, nosubdir
+			subdir を指定するとサブディレクトリ内の
+			ディレクトリも列挙します。nosubdir は列挙しません。
+			初期値は subdir です。
+
+		utf8, utf8bom, system, unicode, unicodebom
+			ファイルに保存するときの文字コードです。
+			初期値は unicodebom です。
+
+
+●ソースについて
+
+	Borland C++ と Visual C++ でコンパイルができるようになっています。
+	ただし、プロジェクトは用意していません。
+
+
+
+●最後に
+
+	・このソフトウェアはフリーソフトウェアです。著作権は「TORO」、
+	  「高橋 良和」にあります。
+
+	・32bit版は、Borland C++ Version 5.02 を用いて構築しています。
+	  64bit版は、Visual Studio 2008 を用いて構築しています。
+
+
+
+●License
+
+PPx FS Module は、MITライセンスに基づいて公開しています。
+PPx FS Module is released under the MIT License.
+
+Copyright (c) 2024 TORO
+
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the “Software”),
+to deal in the Software without restriction, including without limitation
+the rights to use, copy, modify, merge, publish, distribute, sublicense,
+and/or sell copies of the Software, and to permit persons to whom the Software
+is furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included
+in all copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED “AS IS”, WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+
+●履歴
+R1	2024/08/24
+・初版
+
+
+●連絡先／一次配布先						TORO／高橋 良和
+E-mail	toroid.jp@gmail.com
+WWW	http://toro.d.dooo.jp/	https://toroidj.github.io/
